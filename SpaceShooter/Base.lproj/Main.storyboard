@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="SpaceShooter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Space Shooter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5k-aX-8Un">
+                                <rect key="frame" x="40.5" y="68" width="294" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="XnJ-D0-6Qn"/>
+                                    <constraint firstAttribute="width" constant="294" id="f9R-R8-0Vf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="44"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knw-7O-mfZ">
+                                <rect key="frame" x="40" y="289" width="295" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="5J3-0X-sd2"/>
+                                    <constraint firstAttribute="width" constant="295" id="JKH-fF-aEa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="plybtnpressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="5Ph-9j-k7C"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="utq-0Y-vMM">
+                                <rect key="frame" x="0.0" y="143" width="375" height="138"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ship" translatesAutoresizingMaskIntoConstraints="NO" id="B7o-jj-IiN">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="138"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="78" id="BF8-1g-4Xl"/>
+                                            <constraint firstAttribute="height" constant="138" id="RYF-7Q-plH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meteoroid" translatesAutoresizingMaskIntoConstraints="NO" id="mVX-Ch-LTK">
+                                        <rect key="frame" x="115" y="0.0" width="145" height="138"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="147" id="J3t-k3-0li"/>
+                                            <constraint firstAttribute="width" constant="145" id="vKE-2B-zeC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ship" translatesAutoresizingMaskIntoConstraints="NO" id="eBz-J1-ndh">
+                                        <rect key="frame" x="297" y="0.0" width="78" height="138"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="138" id="AEY-Fr-hra"/>
+                                            <constraint firstAttribute="width" constant="78" id="frr-eQ-Exe"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="Knw-7O-mfZ" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="00K-5E-ksY"/>
+                            <constraint firstItem="Knw-7O-mfZ" firstAttribute="top" secondItem="E5k-aX-8Un" secondAttribute="bottom" constant="163" id="0CB-zw-iOP"/>
+                            <constraint firstItem="utq-0Y-vMM" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="756-je-zEM"/>
+                            <constraint firstItem="utq-0Y-vMM" firstAttribute="trailing" secondItem="4qk-I5-YsI" secondAttribute="trailing" id="9mB-cK-84Z"/>
+                            <constraint firstItem="E5k-aX-8Un" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="68" id="DOX-HK-t6I"/>
+                            <constraint firstItem="E5k-aX-8Un" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="XDb-L3-QjN"/>
+                            <constraint firstItem="utq-0Y-vMM" firstAttribute="top" secondItem="E5k-aX-8Un" secondAttribute="bottom" constant="17" id="n8K-oz-7te"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gametitlelbl" destination="E5k-aX-8Un" id="DZZ-sW-afn"/>
+                        <outlet property="playbtn" destination="Knw-7O-mfZ" id="Evq-uS-RCW"/>
+                        <outlet property="sv" destination="utq-0Y-vMM" id="Uuj-Wk-PXM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-213.59999999999999" y="55.322338830584712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="meteoroid" width="106" height="80"/>
+        <image name="ship" width="39" height="34"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
