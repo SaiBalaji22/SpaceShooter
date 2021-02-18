@@ -1,4 +1,5 @@
-# SpaceShooter - iPhone game using Swift and Sprite kit which uses Metal API
+# SpaceShooter - 
+iPhone game using Swift and Sprite kit which uses Metal API
 
 ![1*xjhk3EclSuMSVN13XRRviA](https://user-images.githubusercontent.com/51410810/108349405-f1fb1180-7208-11eb-8bb3-0d861a1780fd.png)
 
